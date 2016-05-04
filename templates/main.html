@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Jonathan Ben-Ammi">
+	<title></title>
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/materialize.css')}}">
+	
+</head>
+<body>
+	<div class="container">
+		<div class="col s6 offset-s3">
+			<form action="/process" method="post">
+				<div class="input-row">	
+					<label>First Name</label>
+					<input type="text" name="fname" />
+				</div>
+				<div class="input-row">
+					<label>Last Name</label>
+					<input type="text" name="lname" />
+				</div>
+				<div class="input-row">
+					<label>E-Mail</label>
+					<input type="email" name="email" />
+				</div>
+				<div class="input-row">
+					<label>Password</label>
+					<input type="password" name="password" />
+				</div>
+				<div class="input-row">
+					<label>Confirm Password</label>
+					<input type="password" name="confirmpass" />
+				</div>
+				<div class="input-row">
+					<button class="btn" type="sumbit"></button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
