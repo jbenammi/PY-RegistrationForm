@@ -10,33 +10,56 @@
 	
 </head>
 <body>
+	<nav>
+		<div class="nav-wrapper blue-grey">
+		
+		</div>
+	</nav> 
 	<div class="container">
-		<div class="col s6 offset-s3">
+		<div class="row">
+		<br>
+			<div class="col s6 offset-s3">
 			<form action="/process" method="post">
-				<div class="input-row">	
+				<div class="input-row">
+					{% if session['err_fname'] %}
+					<p class="red-text">{{session['err_fname']}}</p>
+					{% endif %}
 					<label>First Name</label>
 					<input type="text" name="fname" />
 				</div>
 				<div class="input-row">
+					{% if session['err_lname'] %}
+					<p class="red-text">{{session['err_lname']}}</p>
+					{% endif %}
 					<label>Last Name</label>
 					<input type="text" name="lname" />
 				</div>
 				<div class="input-row">
+					{% if session['err_email'] %}
+					<p class="red-text">{{session['err_email']}}</p>
+					{% endif %}
 					<label>E-Mail</label>
 					<input type="email" name="email" />
 				</div>
 				<div class="input-row">
+					{% if session['err_password'] %}
+					<p class="red-text">{{session['err_password']}}</p>
+					{% endif %}
 					<label>Password</label>
 					<input type="password" name="password" />
 				</div>
 				<div class="input-row">
+					{% if session['err_confirm'] %}
+					<p class="red-text">{{session['err_confirm']}}</p>
+					{% endif %}
 					<label>Confirm Password</label>
 					<input type="password" name="confirmpass" />
 				</div>
 				<div class="input-row">
-					<button class="btn" type="sumbit"></button>
+					<button class="btn" type="sumbit">submit</button>
 				</div>
 			</form>
+			</div>
 		</div>
 	</div>
 </body>
